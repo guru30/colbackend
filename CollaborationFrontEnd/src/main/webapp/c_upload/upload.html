@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+body
+{
+	margin:0px;
+	padding:0px;
+        background-image:url(resources/images/back.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 700px;
+}
+.container
+{
+position: relative;
+top:150px;
+}
+</style>
+</head>
+<body>
+
+
+ <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+  
+  <button type="button" ng-click="ctrl.sumbit()" class="btb btn-success btn-sm">Submit</button>
+  
+ </body>
+</html>

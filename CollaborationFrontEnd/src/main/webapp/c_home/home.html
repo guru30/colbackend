@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>E-Learning Blog</title>
+<style>
+body
+{
+	margin:0px;
+	padding:0px;
+        background-image:url(resources/images/prA.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 700px;
+}
+</style>
+</head>
+<body>
+	<div ng-controller="HomeController as ctrl">
+		<div
+			ng-show="currentUser.role=='admin' || currentUser.role=='alumini' || currentUser.role=='student' || currentUser=='employee'">
+			<div class="nav navbar-nav navbar-left">Welcome:{{currentUser.name}}
+				You logged in as:{{currentUser.role}}</div>
+			<div class="nav navbar-nav navbar-right">
+				<li><a href="#/myprofile">My Profile</a></li> <br>
+			</div>
+		</div>
+		<br> <br>
+		<div class="container">
+			<center>
+				<h2 style="color: red;">Welcome To The Rapid E-Learning Blog</h2>
+			</center>
+			<br>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<center>
+							<img src="resources/images/blogging-quote.jpg" alt="Flower"
+								width="500" height="300">
+						</center>
+						<div class="carousel-caption"></div>
+					</div>
+
+					<div class="item">
+						<center>
+							<img src="resources/images/images.jpg" alt="Flower" width="500"
+								height="300">
+						</center>
+						<div class="carousel-caption"></div>
+					</div>
+
+					<div class="item">
+						<center>
+							<img src="resources/images/ima.jpg" alt="Flower" width="500"
+								height="300">
+						</center>
+						<div class="carousel-caption"></div>
+					</div>
+
+				</div>
+
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" role="button"
+					data-slide="prev"> <span
+					class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a> <a class="right carousel-control" href="#myCarousel" role="button"
+					data-slide="next"> <span
+					class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+
+
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<h3 class="bg-primary">ABOUT US</h3>
+					<p>An edublog is a blog created for educational purposes. Edublogs
+					archive and support student and teacher learning by facilitating
+					reflection, questioning by self and others, collaboration[1] and by
+					providing contexts for engaging in higher-order thinking <p>
+				</div>
+				<div class="col-sm-4">
+					<h3 class="bg-primary">Blogs</h3>
+					<p>You can view blogs before login</p>
+				</div>
+				<div class="col-sm-4">
+					<h3 class="bg-primary">CONTACT US</h3>
+					<p>You can give us your feedback to be more effective in surfing this blog </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

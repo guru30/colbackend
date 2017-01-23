@@ -1,0 +1,32 @@
+
+<head>
+<style type="text/css">
+body
+{
+	margin:0px;
+	padding:0px;
+        background-image:url(resources/images/back.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 700px;
+}
+.container
+{
+position: relative;
+top:100px;
+}
+</style>
+</head>
+
+<div class="container" ng-controller="BlogController as ctrl">
+ 
+ <div ng-repeat="selectedBlog in ctrl.blogs">
+
+<div class="form-group">
+<label>{{selectedBlog.title}}</label><br>
+Written BY:<label>{{selectedBlog.id}}</label>
+<label>{{selectedBlog.dateTime}}</label>
+<label>{{selectedBlog.description}}</label><br>
+ 
+</div>
+</div>
+</div>

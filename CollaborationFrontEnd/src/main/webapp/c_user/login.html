@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body
+{
+	margin:0px;
+	padding:0px;
+        background-image:url(resources/images/brown.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 700px;
+}
+.form-group
+{
+position: relative;
+top:150px;
+}
+
+</style>
+</head>
+
+<body>
+<div ng-controller="UserController as ctrl">
+
+<div ng-show='ctrl.user.errorMessage'>
+<div class="alert alert-danger fade in">Error :
+        {{ctrl.user.errorMessage}}</div>
+   </div>     
+   
+    
+  <span ng-hide="ctrl.userLoggedIn">
+  <form name="form" ng-submit="ctrl.login()" role="form">
+  <div class="form-group" ng-class="{'has-error': form.username.$dirty && form.username.$error.required }">
+  <label for="username">User-name</label> 
+  <input type="text" name="username" id="id" class="form-control" ng-model="ctrl.user.id" required/>
+  <span ng-show="form.username.$dirty && form.username.$error.required" class="help-block">User-name is required</span>
+  </div>
+  
+  <div class="form-group" ng-class="{ 'has-error': form.username.$dirty && form.password.$error.required }">
+  <label for="password">Password</label>
+  <input type="password" name="password" id="password" class="form-control" ng-model="ctrl.user.password" required/>
+  <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required..</span>
+  
+  </div>
+  
+  <div class="row">
+<div class="form-group floatRight">
+<input type="submit" value="Log-In" class="btn btn-primary btn-sm">
+ <a href="/register" class="btn btn-link">Register</a></div></div>
+ 
+ <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+      </div>
+    </div>
+  
+  </form>
+  </span>
+  </div>   
+ </div></div>
+</body>
+</html>
