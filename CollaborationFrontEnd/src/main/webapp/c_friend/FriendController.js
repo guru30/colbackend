@@ -60,23 +60,16 @@ app.controller("FriendController", ['UserService','$scope','FriendService','$loc
 		});
 	};
 	
-	self.sendFriendRequest=sendFriendRequest
-	function sendFriendRequest(friendID)
-	{
-		console.log("->sendFriendRequest :"+friendID);
+	self.sendFriendRequest=function(friendID){
+		alert(friendID)
 		FriendService.sendFriendRequest(friendID)
 		.then
 		(function(d){
+			alert(d.errorMessage)
 			self.friend = d;
-			self.sendRequestCount=true;
-			alert("Friend request sent"+self.sendRequestCount)
-		},
-		  function(errResponse){
-			self.sendRequestCount=false;
-			console.error('Error while sending friend request');
-		}
-		);
+		},null)
 	}
+	
 	
 	self.getMyFriends = function(){
 		console.log("Getting my friends");

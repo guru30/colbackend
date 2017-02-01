@@ -7,7 +7,7 @@ app.service("ChatForumService" , function($q, $timeout) {
 	
 	service.RECONNECT_TIMEOUT = 30000;
 	service.SOCKET_URL = "/CollaborationBackEnd/chat_forum";
-	service.CHAT_TOPIC = "/topic/message";
+	service.CHAT_TOPIC = "/queue/message";
 	service.CHAT_BROKER = "/app/chat_forum";
 	
 	service.recieve = function() {

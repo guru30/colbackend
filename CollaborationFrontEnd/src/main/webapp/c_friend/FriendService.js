@@ -59,7 +59,7 @@ app.factory('FriendService', ['$http', '$q', '$rootScope', function($http, $q, $
 						});
 			},
 			
-			sendFriendRequest: function(friendID){
+			sendFriendRequest: function(friendID,userID){
 				return $http.post(BASE_URL+'/addFriend/'+friendID)
 				.then(
 						function(response){
